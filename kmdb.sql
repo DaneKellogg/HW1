@@ -80,6 +80,7 @@ CREATE TABLE actors (
   first_name TEXT,
   last_name TEXT,
   movie_title TEXT,
+  movie_id INTEGER,
   role TEXT
 );
 
@@ -99,38 +100,38 @@ VALUES ("The Dark Knight", "2008", "PG-13", "Christopher Nolan");
 INSERT INTO movies (name, year, rating, director)
 VALUES ("The Dark Knight Rises", "2012", "PG-13", "Christopher Nolan");
 
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Christian","Bale","Batman Begins", "Bruce Wayne");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Michael","Caine","Batman Begins", "Alfred");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Liam","Neeson","Batman Begins", "Ras Al Ghul");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Katie","Holmes","Batman Begins", "Rachel Dawes");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Gary","Oldman","Batman Begins", "Commissioner Gordon");
+INSERT INTO actors (first_name, last_name,  movie_title, movie_id,role)
+VALUES ("Christian","Bale","Batman Begins", "1" "Bruce Wayne");
+INSERT INTO actors (first_name, last_name,  movie_title, movie_id,role)
+VALUES ("Michael","Caine","Batman Begins", "1", "Alfred");
+INSERT INTO actors (first_name, last_name, movie_title, movie_id,role)
+VALUES ("Liam","Neeson","Batman Begins", "1", "Ras Al Ghul");
+INSERT INTO actors (first_name, last_name,  movie_title, movie_id,role)
+VALUES ("Katie","Holmes","Batman Begins","1", "Rachel Dawes");
+INSERT INTO actors (first_name, last_name,  movie_title, movie_id,role)
+VALUES ("Gary","Oldman","Batman Begins", "1", "Commissioner Gordon");
 
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Christian","Bale","The Dark Knight", "Bruce Wayne");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Michael","Caine","The Dark Knight", "Alfred");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Heath","Ledger","The Dark Knight", "Joker");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Katie","Holmes","The Dark Knight", "Rachel Dawes");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Aaron","Eckhart","The Dark Knight", "Harvey Dent");
+INSERT INTO actors (first_name, last_name, movie_title, movie_id, role)
+VALUES ("Christian","Bale","The Dark Knight", "2", "Bruce Wayne");
+INSERT INTO actors (first_name, last_name, movie_title, movie_id,role)
+VALUES ("Michael","Caine","The Dark Knight", "2", "Alfred");
+INSERT INTO actors (first_name, last_name, movie_title, movie_id,role)
+VALUES ("Heath","Ledger","The Dark Knight","2", "Joker");
+INSERT INTO actors (first_name, last_name, movie_title, movie_id,role)
+VALUES ("Katie","Holmes","The Dark Knight", "2","Rachel Dawes");
+INSERT INTO actors (first_name, last_name, movie_title, movie_id,role)
+VALUES ("Aaron","Eckhart","The Dark Knight", "2","Harvey Dent");
 
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Christian","Bale","The Dark Knight Rises", "Bruce Wayne");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Tom","Hardy","The Dark Knight Rises", "Bane");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Joseph","Gordon-Levitt","The Dark Knight Rises", "John Blake");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Anne","Hathaway","The Dark Knight Rises", "Selina Kyle");
-INSERT INTO actors (first_name, last_name, movie_title, role)
-VALUES ("Gary","Oldman","The Dark Knight Rises", "Commissioner Gordon");
+INSERT INTO actors (first_name, last_name, movie_title, movie_id, role)
+VALUES ("Christian","Bale","The Dark Knight Rises", "3","Bruce Wayne");
+INSERT INTO actors (first_name, last_name, movie_title, movie_id,role)
+VALUES ("Tom","Hardy","The Dark Knight Rises", "3","Bane");
+INSERT INTO actors (first_name, last_name, movie_title, movie_id,role)
+VALUES ("Joseph","Gordon-Levitt","The Dark Knight Rises", "3","John Blake");
+INSERT INTO actors (first_name, last_name, movie_title,movie_id, role)
+VALUES ("Anne","Hathaway","The Dark Knight Rises", "3","Selina Kyle");
+INSERT INTO actors (first_name, last_name, movie_title, movie_id,role)
+VALUES ("Gary","Oldman","The Dark Knight Rises","3", "Commissioner Gordon");
 
 
 -- Use hard-coded foreign key IDs when necessary
@@ -154,5 +155,5 @@ SELECT id, name, year, rating, director FROM movies;
 
 -- The SQL statement for the cast output
 -- TODO!
-SELECT id, first_name, last_name, movie_title, role FROM actors;
+SELECT id, first_name, last_name, movie_title, movie_id, role FROM actors;
 
