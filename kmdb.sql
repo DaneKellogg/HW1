@@ -143,6 +143,7 @@ VALUES ("Gary","Oldman","The Dark Knight Rises", "Commissioner Gordon");
 
 -- The SQL statement for the movies output
 -- TODO!
+SELECT id, name, year, rating, director FROM movies;
 
 -- Prints a header for the cast output
 .print ""
@@ -153,5 +154,5 @@ VALUES ("Gary","Oldman","The Dark Knight Rises", "Commissioner Gordon");
 
 -- The SQL statement for the cast output
 -- TODO!
-
+SELECT id, first_name, last_name, movie_title, role FROM actors;
 
